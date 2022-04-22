@@ -19,7 +19,7 @@ class CreateResponsableDifuntoTable extends Migration
             $table->integer('difunto_id');  
             $table->string('codigo_nicho',20);           
             $table->date('fecha_adjudicacion');    
-            $table->varchar('tiempo',4)->nullable();
+            $table->integer('tiempo')->nullable();
             $table->integer('user_id');
             $table->string('estado',10)->default('ACTIVO');
             $table->timestamps();     
