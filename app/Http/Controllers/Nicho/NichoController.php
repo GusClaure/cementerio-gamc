@@ -42,17 +42,15 @@ class NichoController extends Controller
                 'cuartel' => 'required',
                 'tipo' => 'required',
                 'fila' => 'required',
-                'columna' => 'required',
-                'nro' => 'required',
+                 'nro' => 'required',
                 'cantidad' => 'required',
-
                 'estado' => 'required'
             ], [
                 'bloque.required'  => 'El campo bloque  es obligatorio!',
+                'codigo.required'  => 'El campo codigo  es obligatorio!',
                 'cuartel.required' => 'El campo  cuartel es obligatorio!',
                 'nro.required' => 'El campo Nro  es obligatorio!',
                 'fila.required' => 'El campo fila  es obligatorio!',
-                'columna.required' => 'El campo columna  es obligatorio!',
                 'cantidad.required' => 'El campo cantidad de cuerpos  es obligatorio!',
                 'tipo.required' => 'El campo tipo nicho  es obligatorio!',
                 'codigo.unique' => 'El código '.$request->codigo.' ya se encuentra en uso!.'
@@ -68,7 +66,7 @@ class NichoController extends Controller
                                 'cuartel_id' => trim($request->cuartel),
                                 'nro_nicho' => trim($request->nro),
                                 'fila' => trim($request->fila),
-                                'columna' => trim($request->columna),
+                              
                                 'codigo' => trim($request->codigo),
                                 'codigo_anterior' => trim($request->codigo_anterior),
                                 'cantidad_cuerpos' => trim($request->cantidad),
@@ -117,7 +115,7 @@ class NichoController extends Controller
             'cuartel' => 'required',
             'codigo' => 'required',
             'fila' => 'required',
-            'columna' => 'required',
+            
             'cantidad' => 'required', 
             'tipo' => 'required',           
 
@@ -129,10 +127,8 @@ class NichoController extends Controller
             'cuartel.required'  => 'El campo cuartel de bloque es obligatorio!',
             'fila.required'  => 'El campo fila es obligatorio!',
             'nro.required'  => 'El campo nro nicho es obligatorio!',    
-            'columna.required'  => 'El campo columna es obligatorio!',
             'cantidad.required'  => 'El campo cuartel de bloque es obligatorio!',
             'tipo.required'  => 'El campo tipo de bloque es obligatorio!',
-
             'estado.required'  => 'El campo cuartel de bloque es obligatorio!'
         ]);
        $rep= $this->repetido( $request->id, $request->nro , $request->cuartel,$request->bloque);
@@ -144,8 +140,7 @@ class NichoController extends Controller
             'bloque_id' => $request->bloque,
             'cuartel_id' => $request->cuartel,
             'nro_nicho' => $request->nro,
-            'fila' => $request->fila,
-            'columna' => $request->columna,
+            'fila' => $request->fila,            
             'cantidad_cuerpos' => $request->cantidad,
             'codigo_anterior' => $request->anterior,
             'codigo' => $request->codigo,

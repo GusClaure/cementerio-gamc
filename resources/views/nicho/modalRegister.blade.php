@@ -63,12 +63,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-3 col-xl-3">
-                            <div class="form-group">
-                                <label>Columna:</label>
-                                <input style="text-transform:uppercase;" onblur="generateCode()" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="col" autocomplete="off">
-                            </div>
-                        </div>
+                       
 
                         <div class="col-sm-12 col-md-3 col-xl-3">
                             <div class="form-group">
@@ -83,31 +78,29 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             </div>
                         </div>
 
-                    </div>
-            
-
-
-                    <div class="row" >
-                        <div class="col-md-4 col-xl-4">
+                        <div class="col-sm-12 col-md-3 col-xl-3">
                             <div class="form-group">
                                 <label>Cantidad de  cuerpos:</label>
                                 <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="cant" autocomplete="off">
                             </div>
                         </div>    
-                        
-                        <div class="col-md-4 col-xl-4">
+
+                    </div>
+            
+
+
+                    <div class="row" >      
+                        <div class="col-md-6 col-xl-6">
                             <div class="form-group">
                                 <label>Tipo de  nicho:</label>
                                 <select name="tipo" id="tipo" class="form-control">
                                     <option value="TEMPORAL">TEMPORAL</option>
                                     <option value="PERPETUO">PERPETUO</option>
-
-                                </select>
-                                
+                                </select>                                
                             </div>
                         </div>   
 
-                        <div class="form-group col-md-4 col-xl-4">
+                        <div class="form-group col-md-6 col-xl-6">
                             <label>Estado:</label>
                             <select name="status" id="status" class="form-control">        
                                 <option value="ACTIVO"> ACTIVO</option>

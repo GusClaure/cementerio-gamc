@@ -33,7 +33,7 @@ class ResponsableController extends Controller
                 'nombres' => 'required',
                 'primer_apellido' => 'required',
                 'fecha_nacimiento' => 'required',
-                //'telefono' => 'digit:10|numeric',
+                'telefono' => 'digits:7|numeric',
                 'domicilio' => 'required',
                 'genero' => 'required'
             ], [
@@ -41,7 +41,7 @@ class ResponsableController extends Controller
                 'ci.required'    => 'El campo cedula de identidad es obligatorio!',
                 'ci.unique' => 'El numero de cedula '.$request->ci.' ya se encuentra en uso!.',
                 'min' => 'El :attribute debe tener al menos 8 caracteres.',
-                'telefono.max' => 'El telefono no debe ser mayor a 10.',
+                'telefono' => 'El telefono no debe ser mayor a 7 digitos.',
                 'ci.max' => 'CI no debe ser mayor a 10 caracteres.',
                 'required' => 'El campo :attribute es requerido.'
             ]);

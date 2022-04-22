@@ -276,6 +276,11 @@ return [
             'route'  => 'serv',
             'icon' => 'fas fa-laptop-medical',
         ],
+        [
+            'text' => 'MANTENIMIENTO NICHO',
+            'route'  => 'mant',
+            'icon' => 'fas fa-laptop-medical',
+        ],
 
         ['header' => 'opciones'],
         [

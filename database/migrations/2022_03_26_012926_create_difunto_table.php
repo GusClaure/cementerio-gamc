@@ -25,6 +25,7 @@ class CreateDifuntoTable extends Migration
             $table->string('causa');
             $table->string('tipo');    
             $table->string('genero');
+            $table->string('ecivil');
 
             $table->integer('user_id');
             $table->string('certificado_file')->nullable();

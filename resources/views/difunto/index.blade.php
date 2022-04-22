@@ -138,7 +138,11 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Tipo :</label>
-                                <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="tipo" autocomplete="off">
+                                <select name="tipo_dif" id="tipo" class="form-control">
+                                    <option value="">Seleccionar</option>
+                                    <option value="ADULTO">ADULTO</option>
+                                    <option value="PARVULO">PARVULO</option>                            
+                                </select> 
                             </div>
                         </div>
 
@@ -156,6 +160,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             </div> 
                         </div>
                         <hr>
+                        <label>Adjuntar certificado de defunción :</label>
                         <div class="col-sm-12">
                             <div id="cert-defuncion" class="dropzone" style="text-align: center">
                         </div>
@@ -254,7 +259,11 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Tipo :</label>
-                                <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="tipo-edit" autocomplete="off">
+                                <select name="tipo_dif" id="tipo-edit" class="form-control">
+                                    <option value="">Seleccionar</option>
+                                    <option value="ADULTO">ADULTO</option>
+                                    <option value="PARVULO">PARVULO</option>                            
+                                </select> 
                             </div>
                         </div>
 

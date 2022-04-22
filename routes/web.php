@@ -115,9 +115,11 @@ Route::group(['prefix' => 'servicios', 'middleware' => 'auth'], function () {
     Route::post('/new-servicio', [App\Http\Controllers\Servicios\ServiciosController::class,'createNewServicios'])->name('new.servicio');
     Route::post('/buscar_nicho', [App\Http\Controllers\Servicios\ServiciosController::class, 'buscar_nicho'])->name('buscar.nicho');
     Route::get('/cargarForm', [App\Http\Controllers\Servicios\ServiciosController::class,'cargarForm'])->name('load.form'); 
+    Route::get('/cargarMantenimiento', [App\Http\Controllers\Servicios\ServiciosController::class,'cargarMantenimiento'])->name('load.mant'); 
+
     //generate fur from sinot
     Route::post('/generate-fur', [App\Http\Controllers\Servicios\ServiciosController::class,'generateFur'])->name('servicio.fur'); 
-    
+     
 });
 
 //responsable
@@ -140,6 +142,19 @@ Route::group(['prefix' => 'difunto', 'middleware' => 'auth'], function () {
     Route::get('/get-difunto/{id}', 'App\Http\Controllers\Difunto\DifuntoController@getDifunto')->name('difunto.get');
     Route::put('/update-difunto', 'App\Http\Controllers\Difunto\DifuntoController@updateDifunto')->name('difunto.update');
     
+});
+
+// mantenimiento de nichos
+      Route::group(['prefix' => 'mantenimiento', 'middleware' => 'auth'], function () {
+    Route::get('/mantenimiento', [App\Http\Controllers\Mantenimiento\MantenimientoController::class,'index'])->name('mant'); 
+     Route::get('/form-pay', [App\Http\Controllers\Mantenimiento\MantenimientoController::class,'createPay'])->name('pay');
+    // Route::post('/buscar_nicho', [App\Http\Controllers\Servicios\MantenimientoController::class, 'buscar_nicho'])->name('buscar.nicho');
+    // Route::get('/cargarForm', [App\Http\Controllers\Servicios\MantenimientoController::class,'cargarForm'])->name('load.form'); 
+    // Route::get('/cargarMantenimiento', [App\Http\Controllers\Servicios\MantenimientoController::class,'cargarMantenimiento'])->name('load.mant'); 
+
+    // //generate fur from sinot
+    // Route::post('/generate-fur', [App\Http\Controllers\Mantenimiento\ServiciosController::class,'generateFur'])->name('servicio.fur'); 
+     
 });
 
 
