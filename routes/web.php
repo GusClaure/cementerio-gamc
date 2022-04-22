@@ -146,15 +146,11 @@ Route::group(['prefix' => 'difunto', 'middleware' => 'auth'], function () {
 
 // mantenimiento de nichos
       Route::group(['prefix' => 'mantenimiento', 'middleware' => 'auth'], function () {
-    Route::get('/mantenimiento', [App\Http\Controllers\Mantenimiento\MantenimientoController::class,'index'])->name('mant'); 
-     Route::get('/form-pay', [App\Http\Controllers\Mantenimiento\MantenimientoController::class,'createPay'])->name('pay');
-    // Route::post('/buscar_nicho', [App\Http\Controllers\Servicios\MantenimientoController::class, 'buscar_nicho'])->name('buscar.nicho');
-    // Route::get('/cargarForm', [App\Http\Controllers\Servicios\MantenimientoController::class,'cargarForm'])->name('load.form'); 
-    // Route::get('/cargarMantenimiento', [App\Http\Controllers\Servicios\MantenimientoController::class,'cargarMantenimiento'])->name('load.mant'); 
-
-    // //generate fur from sinot
-    // Route::post('/generate-fur', [App\Http\Controllers\Mantenimiento\ServiciosController::class,'generateFur'])->name('servicio.fur'); 
-     
+      Route::get('/mantenimiento', [App\Http\Controllers\Mantenimiento\MantenimientoController::class,'index'])->name('mant'); 
+      Route::get('/form-pay', [App\Http\Controllers\Mantenimiento\MantenimientoController::class,'createPay'])->name('pay');
+      Route::post('/save-pay', [App\Http\Controllers\Mantenimiento\MantenimientoController::class, 'savePay'])->name('save.pay');
+      Route::get('generate-pdf', [App\Http\Controllers\Mantenimiento\MantenimientoController::class, 'generatePDF'])->name('generatePDF')->middleware('auth');
+      Route::post('/buscar_registros', [App\Http\Controllers\Mantenimiento\MantenimientoController::class, 'buscar_registros'])->name('buscar.registros');
 });
 
 

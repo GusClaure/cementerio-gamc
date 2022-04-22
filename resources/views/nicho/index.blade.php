@@ -41,7 +41,7 @@
                         <th scope="col">Bloque</th>
                         <th scope="col">Nro</th>
                         <th scope="col">Fila</th>
-                        <th scope="col">Columna</th>
+                       
                         <th scope="col">Cantidad</th>
                         <th scope="col">Tipo</th>
                         <th scope="col">Código Antiguo</th>
@@ -62,7 +62,7 @@
                             <td>{{ $nicho->bloque_id }}</td>
                             <td>{{ $nicho->nro_nicho }}</td>
                             <td>{{ $nicho->fila }}</td>
-                            <td>{{ $nicho->columna }}</td>
+                          
                             <td>{{ $nicho->cantidad_cuerpos }}</td>
                             <td>{{ $nicho->tipo }}</td>
                             <td>{{ $nicho->codigo_anterior }}</td>
@@ -140,12 +140,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-md-3 col-xl-3">
-                    <div class="form-group">
-                        <label>Columna:</label>
-                        <input style="text-transform:uppercase;" onblur="generateCode_edit()" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="col_edit" autocomplete="off">
-                    </div>
-                </div>
+             
 
                 <div class="col-sm-12 col-md-3 col-xl-3">
                     <div class="form-group">
@@ -243,7 +238,7 @@
                             'codigo':  $('#code_edit').val(),
                             'cuartel':  $('#cuartel_edit').val(),
                             'fila':  $('#fila_edit').val(),
-                            'columna':  $('#col_edit').val(),
+                          
                             'nro':  $('#nro_edit').val(),
                             'anterior':  $('#anterior_edit').val(),
                             'cantidad':  $('#cant_edit').val(),
@@ -309,7 +304,7 @@
                             'cuartel':  $('#cuartel').val(),
                             'fila':  $('#fila').val(),
                             'tipo':  $('#tipo').val(),
-                            'columna':  $('#col').val(),
+                         
                             'nro':  $('#nro').val(),
                             'cantidad':  $('#cant').val(),
                             'codigo_anterior':  $('#anterior').val(),

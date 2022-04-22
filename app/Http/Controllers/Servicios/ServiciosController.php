@@ -459,6 +459,36 @@ class ServiciosController extends Controller{
 
         return view('servicios/formRegistro', ['tipo_service' => $tipo_service['response']]);
     }
-
+    
+    public function GenerarFur($ci, $nombre, $primer_apellido,
+    $ap_materno, $direccion, $telefono, $nombre_difunto, $codigo,
+     $bloque, $nicho, $fila, $servicios_cementery )
+      {
+        
+  //dd( $servicios_cementery);
+          $headers =  ['Content-Type' => 'application/json'];
+          $client = new Client();
+          $response = $client->post(env('URL_MULTISERVICE') . '/api/v1/cementerio/generate-fur-cementery', [
+              'json' => [
+                  'ci' => $ci,
+                  'nombre' => $nombre,
+                  'primer_apellido' => $primer_apellido,
+                  'ap_materno' => $ap_materno,
+                  'direccion' => $direccion,
+                  'telefono' => $telefono,
+                  'nombre_difunto' => $nombre_difunto,
+                  'codigo' => $codigo,
+                  'bloque' => $bloque,
+                  'fila' => $fila,
+                  'nicho' => $nicho,
+                  'servicios_cementery' => $servicios_cementery
+  
+              ],
+              'headers' => $headers,
+          ]);
+          $fur_response = json_decode((string) $response->getBody(), true);
+        
+          return $fur_response;
+      }
 
 }

@@ -17,16 +17,15 @@ class CreateResponsableDifuntoTable extends Migration
             $table->bigIncrements('id');
             $table->integer('responsable_id'); 
             $table->integer('difunto_id');  
-            $table->string('codigo_nicho',10);           
-            $table->date('fecha_adjudicacion');            
+            $table->string('codigo_nicho',20);           
+            $table->date('fecha_adjudicacion');    
+            $table->varchar('tiempo',4)->nullable();
             $table->integer('user_id');
             $table->string('estado',10)->default('ACTIVO');
             $table->timestamps();     
-
             $table->foreign('responsable_id')->references('id')->on('responsable');
             $table->foreign('difunto_id')->references('id')->on('difunto');
             $table->foreign('codigo_nicho')->references('codigo')->on('nicho');
-
         });
     }
 

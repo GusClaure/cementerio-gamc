@@ -20,14 +20,16 @@ class CreateMantenimientoNichoTable extends Migration
             $table->boolean('pagado')->default(false);
             $table->timestamp('fecha_pago')->nullable();
             $table->integer('fur');
-            $table->integer('responsable_id');
+            $table->integer('respdifunto_id');
             $table->integer('cantidad_gestiones');
+            $table->float('precio_sinot', 12, 2);           
             $table->string('monto');
-
+            $table->string('ultimo_pago');
+            $table->integer('id_usuario_caja')->nullable();
             $table->string('estado');
             $table->timestamps();
 
-            $table->foreign('responsable_id')->references('id')->on('responsable');
+            $table->foreign('respdifunto_id')->references('id')->on('responsable_difunto');
         });
     }
 
